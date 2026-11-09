@@ -1,0 +1,547 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Duong Kylie Piano · Thùy Dương</title>
+<meta name="description" content="Thùy Dương, nghệ sĩ piano và giáo viên piano tại Hà Nội. Dạy bằng tiếng Việt hoặc tiếng Anh.">
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#0C0B0E">
+<meta property="og:title" content="Duong Kylie Piano · Thùy Dương">
+<meta property="og:description" content="Nghệ sĩ piano và giáo viên piano tại Hà Nội.">
+<meta property="og:image" content="img/hero.jpg">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230C0B0E'/%3E%3Crect x='6' y='6' width='9' height='20' rx='1.5' fill='%23F4F1EB'/%3E%3Crect x='17' y='6' width='9' height='20' rx='1.5' fill='%23F4F1EB'/%3E%3Crect x='12.5' y='6' width='7' height='12' rx='1' fill='%230C0B0E'/%3E%3Crect x='6' y='26' width='20' height='2' fill='%23A3192F'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500&family=Noto+Music&family=Noto+Serif+Display:ital,wght@0,300;0,400;1,300;1,400&display=swap">
+<style>
+/* Restraint first. Two piano gestures only: the lacquered fallboard header with its red key-slip,
+   and the open piano on the first screen (strings above, a row of real keys along the bottom edge).
+   Everything else is photography, prose and white space. The site keeps one look and ignores OS dark mode. */
+:root{
+  --lacquer:#0C0B0E; --lacquer-2:#141217; --line-n:#2A2630;
+  --ivory:#F4F1EB; --line-d:#D9D3C8;
+  --ink:#16141A; --ink-2:#4A4650; --mute:#857F8A;
+  --felt:#A3192F; --felt-2:#BC2840;
+  --brass:#C9A35C;
+  --on-n:#EEE9E0; --on-n-2:#A39CA6;
+  --display:"Noto Serif Display","Noto Serif",Georgia,serif;
+  --body:"Be Vietnam Pro","Segoe UI",Roboto,system-ui,sans-serif;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--lacquer);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.7;font-weight:300;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--lacquer)}
+a{color:inherit}
+img{display:block;max-width:100%}
+button{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--brass);outline-offset:3px}
+h1,h2,h3{font-family:var(--display);font-weight:300;margin:0;line-height:1.05;letter-spacing:-.015em;text-wrap:balance}
+p{margin:0}
+figure{margin:0}
+.wrap{max-width:1240px;margin:0 auto;padding-left:max(24px,env(safe-area-inset-left,0px));padding-right:max(24px,env(safe-area-inset-right,0px))}
+.day{background:var(--ivory);color:var(--ink)}
+.night{background:var(--lacquer);color:var(--on-n)}
+.night .soft{color:var(--on-n-2)}
+.day .soft{color:var(--ink-2)}
+
+/* actions */
+.btn{display:inline-block;padding:15px 26px;background:var(--felt);color:#fff;text-decoration:none;font-size:15px;font-weight:400;letter-spacing:.02em;transition:background .25s}
+.btn:hover{background:var(--felt-2)}
+.tl{text-decoration:none;font-size:15px;font-weight:400;border-bottom:1px solid currentColor;padding-bottom:3px;transition:opacity .2s}
+.tl:hover{opacity:.7}
+.acts{display:flex;flex-wrap:wrap;align-items:center;gap:18px 32px}
+.num{font-size:15px;letter-spacing:.04em;color:var(--mute)}
+
+/* fallboard */
+.fall{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:linear-gradient(180deg,#1A181D 0%,#0C0B0E 60%,#070608 100%);color:var(--on-n)}
+.fall-in{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:20px;min-height:76px}
+.fall nav{display:flex;gap:30px;font-size:14.5px;font-weight:400}
+.fall nav a{text-decoration:none;color:var(--on-n-2);padding-block:6px;border-bottom:1px solid transparent;transition:color .2s}
+.fall nav a:hover,.fall nav a.on{color:var(--on-n)}
+.fall nav a.on{border-bottom-color:var(--felt)}
+.fall-r{display:flex;align-items:center;justify-content:flex-end;gap:30px}
+.mark{display:grid;justify-items:center;text-decoration:none;gap:3px}
+.mark-name{font-family:var(--display);font-size:28px;font-style:italic;font-weight:300;letter-spacing:.01em;line-height:1.1;background:linear-gradient(100deg,#8C7140 0%,#E8D29B 38%,#C9A35C 55%,#F2E2B4 70%,#9C7E45 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.mark-sub{font-size:9.5px;letter-spacing:.44em;color:var(--brass);padding-left:.44em;font-weight:400}
+.lang{background:none;border:0;padding:6px 0;font-size:12.5px;letter-spacing:.14em;cursor:pointer;color:var(--on-n-2)}
+.lang b{color:var(--on-n);font-weight:500}
+.slip{height:3px;background:linear-gradient(90deg,#7A1222,#B3233A 50%,#7A1222)}
+.burger{display:none;background:none;border:0;padding:10px 0 10px 10px;cursor:pointer;color:var(--on-n)}
+.burger span{display:block;width:22px;height:1px;background:currentColor;margin:6px 0}
+.drawer{position:fixed;inset:0;z-index:70;background:var(--lacquer);color:var(--on-n);padding:calc(env(safe-area-inset-top,0px) + 20px) max(24px,env(safe-area-inset-right,0px)) 28px max(24px,env(safe-area-inset-left,0px));display:grid;align-content:start}
+.drawer .x{justify-self:end;background:none;border:0;font-size:30px;line-height:1;cursor:pointer;color:var(--on-n);padding:8px 0 24px}
+.drawer a{font-family:var(--display);font-size:38px;font-weight:300;text-decoration:none;padding:10px 0}
+
+/* first screen: the open piano */
+.hero{position:relative;overflow:hidden;background:var(--lacquer);color:var(--on-n)}
+.hero canvas{position:absolute;inset:0;width:100%;height:100%;display:block}
+.hero::after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(90deg,var(--lacquer) 0%,rgba(12,11,14,.9) 36%,rgba(12,11,14,.3) 66%,rgba(12,11,14,.1) 100%)}
+.hero-in{position:relative;z-index:2;display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,.75fr);gap:56px;align-items:center;min-height:min(80vh,780px);padding-block:80px 72px}
+.name{font-size:clamp(68px,10vw,144px);line-height:.9;letter-spacing:-.03em}
+.hero p{margin-top:30px;font-size:18px;max-width:27em;color:var(--on-n-2);text-wrap:pretty}
+.hero .acts{margin-top:44px}
+.grand{justify-self:center;width:min(100%,330px)}
+.grand svg{display:block;width:100%;height:auto;filter:drop-shadow(0 30px 60px rgba(0,0,0,.55))}
+.kbd{position:relative;z-index:3;display:flex;height:60px;border-top:3px solid var(--felt);user-select:none;-webkit-user-select:none;touch-action:pan-y;-webkit-tap-highlight-color:transparent}
+.kbd .w{flex:1;min-width:0;padding:0;border:0;border-right:1px solid #2A262C;border-radius:0 0 3px 3px;background:linear-gradient(180deg,#EDE9E1 0%,#FFFFFF 22%,#F7F4EE 82%,#E2DDD3 100%);cursor:pointer;transition:background .06s}
+.kbd .w.down{background:linear-gradient(180deg,#DDD7CC,#E9E4DA 70%,#D6D0C4)}
+.kbd .b{position:absolute;top:0;height:60%;padding:0;border:0;border-radius:0 0 3px 3px;background:linear-gradient(180deg,#26232A,#0A090C 88%);box-shadow:0 3px 4px rgba(0,0,0,.35),inset 0 -5px 0 rgba(255,255,255,.06);cursor:pointer;z-index:2}
+.kbd .b.down{background:#1C1A20;box-shadow:inset 0 -2px 0 rgba(255,255,255,.04)}
+
+/* statement */
+.stmt{padding-block:clamp(96px,13vw,176px)}
+.stmt p{font-family:var(--display);font-weight:300;font-size:clamp(27px,3.4vw,44px);line-height:1.3;max-width:23em;margin-left:clamp(0px,8vw,110px)}
+.stmt .tl{display:inline-block;margin:48px 0 0 clamp(0px,8vw,110px)}
+
+/* two doors */
+.doors{display:grid;grid-template-columns:1fr 1fr;gap:2px;background:var(--lacquer)}
+.door{position:relative;display:block;width:100%;aspect-ratio:4/5;max-height:92vh;overflow:hidden;color:#fff;text-decoration:none;background:var(--lacquer-2)}
+.door img{width:100%;height:100%;object-fit:cover;object-position:50% 35%;transition:transform 1.8s cubic-bezier(.2,.7,.2,1)}
+.door:hover img{transform:scale(1.035)}
+.door::after{content:"";position:absolute;inset:auto 0 0;height:45%;background:linear-gradient(180deg,transparent,rgba(8,7,9,.72))}
+.door span{position:absolute;z-index:2;left:clamp(24px,4vw,56px);bottom:clamp(26px,4vw,56px);font-family:var(--display);font-size:clamp(42px,5.6vw,80px);font-weight:300;line-height:1;letter-spacing:-.02em}
+
+/* listen */
+.listen{padding-block:clamp(96px,11vw,150px)}
+.listen h2,.sec-h{font-size:clamp(40px,5.2vw,68px);margin-bottom:clamp(40px,5vw,64px)}
+.reels{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(14px,2vw,24px)}
+.reel{display:grid;gap:16px;text-decoration:none;color:inherit}
+.reel figure{position:relative;aspect-ratio:9/14;overflow:hidden;background:var(--lacquer-2)}
+.reel img{width:100%;height:100%;object-fit:cover;transition:transform 1.4s cubic-bezier(.2,.7,.2,1),filter .4s}
+.reel:hover img{transform:scale(1.04)}
+.reel figure::after{content:"";position:absolute;left:16px;bottom:16px;border-left:11px solid rgba(255,255,255,.92);border-top:7px solid transparent;border-bottom:7px solid transparent;filter:drop-shadow(0 1px 3px rgba(0,0,0,.5))}
+.reel b{font-family:var(--display);font-style:italic;font-weight:300;font-size:19px;line-height:1.3}
+
+/* page heads */
+.ph{padding-block:clamp(64px,9vw,128px)}
+.ph-in{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.7fr);gap:clamp(40px,8vw,120px);align-items:end}
+.ph h1{font-size:clamp(58px,8.4vw,120px);line-height:.92;letter-spacing:-.03em}
+.ph p{margin-top:36px;font-size:18.5px;max-width:34ch}
+.ph figure{aspect-ratio:3/4;overflow:hidden;background:var(--lacquer-2)}
+.ph figure img{width:100%;height:100%;object-fit:cover;object-position:50% 30%}
+
+/* two languages */
+.bi{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--line-d)}
+.bi > div{padding-block:clamp(64px,8vw,104px)}
+.bi > div:first-child{padding-right:clamp(32px,6vw,88px)}
+.bi > div + div{border-left:1px solid var(--line-d);padding-left:clamp(32px,6vw,88px);display:flex;align-items:center}
+.bi h2{font-size:clamp(30px,3.2vw,42px);margin-bottom:24px}
+.bi p{max-width:36em}
+.aside{font-family:var(--display);font-style:italic;font-weight:300;font-size:clamp(25px,2.7vw,36px);line-height:1.32;color:var(--ink-2)}
+
+/* closing call */
+.cta{padding-block:clamp(96px,12vw,160px);border-top:1px solid var(--line-d)}
+.night.cta{border-top-color:var(--line-n)}
+.cta h2{font-size:clamp(38px,5.2vw,68px);max-width:15ch}
+.cta .acts{margin-top:44px}
+
+/* performance styles */
+.styles{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(18px,3vw,40px);padding-bottom:clamp(96px,11vw,150px)}
+.style{display:grid;gap:20px;text-decoration:none;color:inherit;align-content:start}
+.style figure{position:relative;aspect-ratio:3/4;overflow:hidden;background:var(--lacquer-2)}
+.style img{width:100%;height:100%;object-fit:cover;object-position:50% 40%;transition:transform 1.6s cubic-bezier(.2,.7,.2,1)}
+.style:hover img{transform:scale(1.035)}
+.style figure::after{content:"";position:absolute;left:18px;bottom:18px;border-left:11px solid rgba(255,255,255,.92);border-top:7px solid transparent;border-bottom:7px solid transparent;filter:drop-shadow(0 1px 3px rgba(0,0,0,.5))}
+.style h3{font-size:clamp(28px,2.8vw,38px)}
+.style i{font-family:var(--display);font-weight:300;font-size:18px;color:var(--on-n-2);margin-top:-8px}
+
+/* venues */
+.venues{padding-block:clamp(96px,11vw,150px);border-top:1px solid var(--line-n)}
+.venues p{font-family:var(--display);font-weight:300;font-size:clamp(27px,3.4vw,44px);line-height:1.32;max-width:22em;color:var(--on-n-2);margin-left:clamp(0px,8vw,110px)}
+.venues b{font-weight:300;color:var(--on-n)}
+
+/* about */
+.about{display:grid;grid-template-columns:minmax(0,.78fr) minmax(0,1fr);gap:clamp(40px,8vw,120px);align-items:start;padding-block:clamp(64px,9vw,128px)}
+.about figure{position:sticky;top:110px;aspect-ratio:3/4;overflow:hidden;background:var(--lacquer-2)}
+.about figure img{width:100%;height:100%;object-fit:cover;object-position:50% 20%}
+.about h1{font-size:clamp(58px,8vw,112px);line-height:.92;letter-spacing:-.03em}
+.prose{margin-top:44px;max-width:36em}
+.prose .lead{font-family:var(--display);font-weight:300;font-size:clamp(23px,2.3vw,29px);line-height:1.4;color:var(--ink)}
+.prose p + p{margin-top:24px}
+.prose p{color:var(--ink-2)}
+.about .acts{margin-top:52px}
+
+/* contact */
+.zl{margin-top:48px;display:grid;gap:6px}
+.zl span{font-size:14px;letter-spacing:.06em;color:var(--on-n-2)}
+.zl a{font-family:var(--display);font-weight:300;font-size:clamp(42px,6vw,78px);line-height:1;text-decoration:none;letter-spacing:-.01em}
+.zl a:hover{color:#fff}
+.soc{margin-top:40px;display:flex;flex-wrap:wrap;gap:10px 28px}
+.city{margin-top:40px}
+
+/* link-in-bio */
+.links{min-height:calc(100vh - 79px);display:grid;justify-items:center;align-content:start;padding:56px 24px 96px;text-align:center}
+.av{width:104px;height:104px;border-radius:50%;overflow:hidden;margin-bottom:22px}
+.av img{width:100%;height:100%;object-fit:cover}
+.links h1{font-size:40px}
+.lk{display:grid;width:min(100%,420px);margin-top:40px;border-top:3px solid var(--felt)}
+.lk a{display:block;text-align:left;background:linear-gradient(90deg,#FFFFFF,#F3EFE8 85%,#E2DCD1);color:var(--ink);text-decoration:none;padding:19px 24px;border-bottom:1px solid #2A262C;border-radius:0 0 6px 0;font-weight:400;transition:transform .08s,background .2s}
+.lk a:hover{background:linear-gradient(90deg,#FFFFFF,#ECE7DE 85%,#DAD3C6)}
+.lk a:active{transform:translateY(2px)}
+
+/* footer */
+footer{background:var(--lacquer);color:var(--on-n-2);border-top:1px solid var(--line-n);font-size:15px}
+.foot{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:32px;padding-block:64px 28px}
+.foot nav{display:flex;flex-wrap:wrap;gap:10px 28px}
+.foot a{text-decoration:none;transition:color .2s}
+.foot a:hover{color:var(--on-n)}
+.end{display:flex;justify-content:space-between;align-items:center;gap:16px;padding-bottom:36px;font-size:13px}
+.bar{display:inline-block;width:9px;height:30px;border-left:1px solid var(--brass);border-right:4px solid var(--brass);margin-left:3px}
+
+/* Zalo key */
+.fab.away{opacity:0;pointer-events:none;transform:translateY(8px)}
+.fab{transition:opacity .3s,transform .3s;position:fixed;right:max(18px,env(safe-area-inset-right,0px));bottom:calc(18px + env(safe-area-inset-bottom,0px));z-index:40;text-decoration:none;background:linear-gradient(180deg,#26232A,#0A090C);color:var(--on-n);padding:14px 16px 12px;border-radius:0 0 6px 6px;border-top:3px solid var(--felt);box-shadow:0 10px 28px rgba(0,0,0,.35);font-size:13px;font-weight:400;letter-spacing:.04em}
+
+@media (max-width: 980px){
+  .fall nav{display:none}
+  .burger{display:block}
+  .fall-in{grid-template-columns:auto 1fr auto;min-height:66px}
+  .mark{justify-items:start;order:-1}
+  .fall-l{display:none}
+  .mark-name{font-size:24px}
+  .reels{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width: 760px){
+  body{font-size:16.5px}
+  .hero::after{background:linear-gradient(180deg,rgba(12,11,14,.25) 0%,rgba(12,11,14,.75) 48%,rgba(12,11,14,.95) 100%)}
+  .hero-in{grid-template-columns:minmax(0,1fr);gap:40px;min-height:0;padding-block:44px 52px}
+  .grand{width:min(70%,270px);order:-1}
+  .name{font-size:clamp(58px,17vw,84px)}
+  .kbd{height:52px}
+  .doors{grid-template-columns:1fr}
+  .ph-in,.about,.bi{grid-template-columns:minmax(0,1fr)}
+  .ph-in{align-items:start}
+  .ph figure{order:-1;aspect-ratio:4/5}
+  .bi > div:first-child{padding-right:0}
+  .bi > div + div{border-left:0;border-top:1px solid var(--line-d);padding-left:0}
+  .about figure{position:relative;top:0;aspect-ratio:4/5}
+  .styles{grid-template-columns:minmax(0,1fr);gap:56px}
+  .stmt p,.stmt .tl,.venues p{margin-left:0}
+  .foot{align-items:flex-start;flex-direction:column}
+}
+@media (prefers-reduced-motion: reduce){*{transition:none !important;scroll-behavior:auto !important}}
+</style>
+</head>
+<body>
+
+<header class="fall" id="fall"></header>
+<main id="view"></main>
+<div id="foot"></div>
+<div id="fab"></div>
+<div id="drawer" hidden></div>
+
+<script>
+(function(){
+var ZALO="083 989 7788", ZURL="https://zalo.me/0839897788";
+var LINKS={yt:"https://www.youtube.com/@Duongkyliepiano01", tt:"https://www.tiktok.com/@duongkylie_19nk", fb:"https://www.facebook.com/share/14bBQGm7udm/"};
+var LISTEN=[
+  {img:"img/l1.jpg", url:"https://www.youtube.com/shorts/0gphSor_e78", t:"Something Happened to My Heart"},
+  {img:"img/l2.jpg", url:"https://www.youtube.com/shorts/QRXA4EIJIWs", t:"La Maritza"},
+  {img:"img/l3.jpg", url:"https://www.youtube.com/shorts/HgMaOXJMsig", t:"Có nhau trọn đời"},
+  {img:"img/l4.jpg", url:"https://www.youtube.com/shorts/XSxIkgT3pd4", t:"Dạ khúc"}
+];
+var STYLE_MEDIA=[
+  {img:"img/s-pop.jpg", url:"https://www.youtube.com/shorts/R8Nzk8OBikc", t:"Sắc môi em hồng"},
+  {img:"img/s-jazz.jpg", url:"https://www.youtube.com/shorts/tLjlQUQbjNM", t:"Vài lần đón đưa"},
+  {img:"img/s-classic.jpg", url:"https://www.tiktok.com/@duongkylie_19nk/video/7677151129985142036", t:"Chopin, Valse Op. 69 No. 2"}
+];
+
+var T={
+vi:{
+  nav:{home:"Trang chủ",lessons:"Học piano",events:"Biểu diễn",about:"Giới thiệu",contact:"Liên hệ"},
+  sub:"PIANO · HÀ NỘI", fab:"Zalo", kbd:"Phím đàn", city:"Hà Nội",
+  home:{
+    line:"Nghệ sĩ piano và giáo viên piano tại Hà Nội.<br>Dạy bằng tiếng Việt hoặc tiếng Anh.",
+    cta:"Đặt buổi học thử", cta2:"Mời biểu diễn", alt:"Thùy Dương bên cây đàn",
+    stmt:"Mười một năm học piano cổ điển ở Cao đẳng Nghệ thuật Hà Nội, thủ khoa cả khi vào lẫn khi ra trường. Giờ cô dạy đàn cho các bạn nhỏ và người lớn, bằng tiếng Việt hoặc tiếng Anh, và chơi piano ở những sảnh khách sạn, nhà hàng và buổi tiệc riêng của Hà Nội.",
+    more:"Về Thùy Dương", d1:"Học đàn", d2:"Biểu diễn", listen:"Nghe Dương chơi"
+  },
+  lessons:{
+    h:"Học piano",
+    p:"Cô Thùy Dương nhận học viên mọi lứa tuổi, đặc biệt là các bạn nhỏ từ năm tuổi muốn học đàn bài bản. Nền tảng là lối học cổ điển chính quy mà cô đã theo suốt mười một năm.",
+    biH:"Bằng tiếng Việt hoặc tiếng Anh",
+    biP:"Cô tốt nghiệp loại Xuất sắc ngành Tiếng Anh Thương mại tại Đại học Ngoại thương, IELTS 8.0. Bên cạnh lớp tiếng Việt, cô dạy piano bằng tiếng Anh cho người nước ngoài và các bạn nhỏ người Việt, chỉ cần con đã biết chút ít tiếng Anh.",
+    aside:"Piano lessons in English, for expat families in Hanoi and for children who already know a little English.", asideLang:"en",
+    ctaH:"Bắt đầu bằng một buổi học thử.", ctaB:"Nhắn Zalo cho cô Dương"
+  },
+  events:{
+    h:"Biểu diễn",
+    p:"Piano cho sảnh khách sạn, nhà hàng, tiệc cưới và những buổi tối riêng tư ở Hà Nội.",
+    styles:["Nhạc trẻ & hiện đại","Jazz","Cổ điển"],
+    venues:"Dương đã chơi đàn tại <b>Pan Pacific</b>, <b>Sheraton</b>, <b>JW Marriott</b>, <b>The One</b>, <b>Long Vỹ</b>, <b>Hanoi Signature</b> và <b>La Table Hanoi</b>.",
+    ctaH:"Gửi cho Dương ngày, giờ và địa điểm.", ctaB:"Nhắn Zalo"
+  },
+  about:{
+    h:"Thùy Dương",
+    lead:"Thùy Dương bắt đầu học piano từ năm 5 tuổi, rồi theo học chính quy chuyên ngành piano cổ điển tại Cao đẳng Nghệ thuật Hà Nội suốt mười một năm.",
+    p:[
+      "Cô là thủ khoa đầu vào và đầu ra hệ Cao đẳng, thủ khoa và tốt nghiệp loại Xuất sắc hệ Trung cấp chín năm. Cô từng học masterclass với Ratko Delorko, Matti Raekallio, Alistair Noble, Gábor Eckhardt, Eun Young Joo, Ji Sung Lee và Trần Thu Hà.",
+      "Năm 2013, cô là một trong ba học sinh khoa Piano được chọn biểu diễn trong buổi giao lưu với NSND Đặng Thái Sơn. Năm 2016, cô đoạt giải nhất Liên hoan Nghệ thuật Châu Á Thái Bình Dương tại Singapore, và năm 2018 nhận học bổng Cử nhân Biểu diễn Piano của Australian Institute of Music. Các năm 2021, 2023 và 2025, cô đoạt giải tại Liên hoan ban, nhóm biểu diễn nghệ thuật của trường.",
+      "Cô tốt nghiệp loại Xuất sắc ngành Tiếng Anh Thương mại tại Đại học Ngoại thương, IELTS 8.0. Đến nay cô đã dạy đàn năm năm, biểu diễn ba năm tại các khách sạn và nhà hàng ở Hà Nội, và đang theo học pop-jazz với thầy Đỗ Đức Thiện."
+    ],
+    a1:"Đặt buổi học thử", a2:"Mời biểu diễn", alt:"Chân dung Thùy Dương"
+  },
+  contact:{h:"Liên hệ"},
+  links:{items:[["Học piano","#lessons"],["Mời biểu diễn","#events"],["Nhắn Zalo",ZURL],["TikTok",LINKS.tt],["YouTube",LINKS.yt],["Facebook",LINKS.fb]]},
+  copy:"© 2026 Thùy Dương"
+},
+en:{
+  nav:{home:"Home",lessons:"Lessons",events:"Performances",about:"About",contact:"Contact"},
+  sub:"PIANO · HANOI", fab:"Zalo", kbd:"Piano keys", city:"Hanoi",
+  home:{
+    line:"Pianist and piano teacher in Hanoi.<br>Lessons in English or Vietnamese.",
+    cta:"Book a trial lesson", cta2:"Book a performance", alt:"Thùy Dương at the piano",
+    stmt:"Eleven years of classical piano at the Hanoi College of Arts, top of her class on entry and on graduation. Today she teaches young children and adults, in English or Vietnamese, and plays in the hotel lobbies, restaurants and private parties of Hanoi.",
+    more:"About Thùy Dương", d1:"Lessons", d2:"Performances", listen:"Listen"
+  },
+  lessons:{
+    h:"Piano lessons",
+    p:"Thùy Dương teaches students of every age, especially children from five who want to learn properly from the start. Her teaching rests on the classical training she followed for eleven years.",
+    biH:"In English or Vietnamese",
+    biP:"She graduated with distinction in Business English from the Foreign Trade University, IELTS 8.0. Alongside her Vietnamese classes she teaches piano in English, for expat families and for Vietnamese children who already know a little English.",
+    aside:"Học piano bằng tiếng Việt, cho các bạn nhỏ và người lớn tại Hà Nội.", asideLang:"vi",
+    ctaH:"Begin with a trial lesson.", ctaB:"Message on Zalo"
+  },
+  events:{
+    h:"Performances",
+    p:"Piano for hotel lobbies, restaurants, weddings and private evenings in Hanoi.",
+    styles:["Modern & pop","Jazz","Classical"],
+    venues:"Dương has played at <b>Pan Pacific</b>, <b>Sheraton</b>, <b>JW Marriott</b>, <b>The One</b>, <b>Long Vỹ</b>, <b>Hanoi Signature</b> and <b>La Table Hanoi</b>.",
+    ctaH:"Send Dương the date, time and venue.", ctaB:"Message on Zalo"
+  },
+  about:{
+    h:"Thùy Dương",
+    lead:"Thùy Dương began the piano at five, then spent eleven years studying classical piano at the Hanoi College of Arts.",
+    p:[
+      "She entered and graduated from the college programme at the top of her class, and finished the nine-year intermediate programme first in her year, with distinction. She has played in masterclasses with Ratko Delorko, Matti Raekallio, Alistair Noble, Gábor Eckhardt, Eun Young Joo, Ji Sung Lee and Trần Thu Hà.",
+      "In 2013 she was one of three piano students chosen to perform for People’s Artist Đặng Thái Sơn. In 2016 she won first prize at the Asia Pacific Arts Festival in Singapore, and in 2018 she was offered a Bachelor of Piano Performance scholarship by the Australian Institute of Music. She won prizes at the college’s ensemble festival in 2021, 2023 and 2025.",
+      "She also graduated with distinction in Business English from the Foreign Trade University, IELTS 8.0. She has taught for five years, performed for three in Hanoi’s hotels and restaurants, and now studies pop-jazz with Đỗ Đức Thiện."
+    ],
+    a1:"Book a trial lesson", a2:"Book a performance", alt:"Portrait of Thùy Dương"
+  },
+  contact:{h:"Contact"},
+  links:{items:[["Piano lessons","#lessons"],["Book a performance","#events"],["Message on Zalo",ZURL],["TikTok",LINKS.tt],["YouTube",LINKS.yt],["Facebook",LINKS.fb]]},
+  copy:"© 2026 Thùy Dương"
+}
+};
+
+var lang="vi";
+try{ var s=localStorage.getItem("dkp-lang"); if(s==="en"||s==="vi") lang=s; }catch(e){}
+var ROUTES=["home","lessons","events","about","contact","links"];
+function route(){ var r=(location.hash||"").replace("#",""); return ROUTES.indexOf(r)>=0?r:"home"; }
+function esc(s){ return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;"); }
+function ext(u){ return u.charAt(0)==="#" ? 'href="'+u+'"' : 'href="'+u+'" target="_blank" rel="noopener"'; }
+
+/* a small piano-like voice */
+var actx=null, master=null;
+function ac(){
+  if(!actx){ var C=window.AudioContext||window.webkitAudioContext; if(!C) return null;
+    actx=new C(); master=actx.createGain(); master.gain.value=.7;
+    var comp=actx.createDynamicsCompressor(); master.connect(comp); comp.connect(actx.destination); }
+  if(actx.state==="suspended") actx.resume();
+  return actx;
+}
+function tone(m,vel){
+  var a=ac(); if(!a) return;
+  var t=a.currentTime, f=440*Math.pow(2,(m-69)/12), v=vel||.9, dur=Math.max(1.2,4.2-(m-40)*0.05);
+  var out=a.createGain();
+  out.gain.setValueAtTime(0.0001,t); out.gain.exponentialRampToValueAtTime(.32*v,t+.006);
+  out.gain.exponentialRampToValueAtTime(.11*v,t+.32); out.gain.exponentialRampToValueAtTime(.0001,t+dur);
+  var lp=a.createBiquadFilter(); lp.type="lowpass";
+  lp.frequency.setValueAtTime(Math.min(16000,f*10),t); lp.frequency.exponentialRampToValueAtTime(Math.min(9000,f*3),t+.7);
+  [[1,.62,"triangle"],[2,.26,"sine"],[3,.12,"sine"],[4,.06,"sine"],[5.03,.035,"sine"],[0.5,.05,"sine"]].forEach(function(p,k){
+    var o=a.createOscillator(); o.type=p[2]; o.frequency.value=f*p[0]*(1+(k?0.0007*k:0));
+    var g=a.createGain(); g.gain.value=p[1]; o.connect(g); g.connect(lp); o.start(t); o.stop(t+dur+.05);
+  });
+  lp.connect(out); out.connect(master);
+}
+
+/* the strings inside the lid */
+var SC=null;
+function Strings(cv){
+  var ctx=cv.getContext("2d"), N=64, NB=18, amp=new Float32Array(N), ph=new Float32Array(N), W=0,H=0,dpr=1, raf=0, geo=[], alive=true, lo=21, hi=108;
+  for(var i=0;i<N;i++) ph[i]=Math.random()*6.28;
+  function layout(){
+    var r=cv.getBoundingClientRect(); dpr=Math.min(2,window.devicePixelRatio||1);
+    W=r.width; H=r.height; cv.width=Math.round(W*dpr); cv.height=Math.round(H*dpr);
+    geo=[]; var left=W*0.38, right=W*0.99; if(W<760){ left=W*0.0; right=W*1.0; }
+    var span=right-left;
+    for(var i=0;i<N;i++){ var g;
+      if(i<NB){ var u=i/(NB-1);
+        g={x0:left+span*(0.00+0.30*u), y0:H*1.02, x1:left+span*(0.34+0.26*u), y1:H*(0.02+0.03*u), w:2.2-0.9*u, c:"rgba(196,150,84,", base:.42};
+      } else { var u2=(i-NB)/(N-NB-1), x0=left+span*(0.26+0.72*u2);
+        g={x0:x0, y0:H*1.0, x1:x0-span*0.05, y1:H*(0.06+0.66*Math.pow(u2,1.25)), w:1.1-0.55*u2, c:"rgba(222,214,200,", base:.24};
+      }
+      g.len=Math.hypot(g.x1-g.x0,g.y1-g.y0); g.nx=-(g.y1-g.y0)/g.len; g.ny=(g.x1-g.x0)/g.len; g.u=i/(N-1); geo.push(g);
+    }
+    draw(performance.now());
+  }
+  function draw(now){
+    ctx.setTransform(dpr,0,0,dpr,0,0); ctx.clearRect(0,0,W,H);
+    var cx=W<760?W*0.5:W*0.72, grd=ctx.createRadialGradient(cx,H*0.45,10,cx,H*0.45,Math.max(W,H)*0.55);
+    grd.addColorStop(0,"rgba(201,163,92,0.13)"); grd.addColorStop(1,"rgba(201,163,92,0)"); ctx.fillStyle=grd; ctx.fillRect(0,0,W,H);
+    var any=false;
+    for(var i=0;i<N;i++){ var g=geo[i], a=amp[i]; ctx.beginPath();
+      if(a>0.15){ any=true; var w=(10+26*g.u)*0.001*6.283;
+        for(var k=0;k<=18;k++){ var s=k/18, d=a*Math.sin(Math.PI*s)*Math.sin(now*w+ph[i]);
+          var x=g.x0+(g.x1-g.x0)*s+g.nx*d, y=g.y0+(g.y1-g.y0)*s+g.ny*d; if(k) ctx.lineTo(x,y); else ctx.moveTo(x,y); }
+        amp[i]*=0.955;
+      } else { ctx.moveTo(g.x0,g.y0); ctx.lineTo(g.x1,g.y1); amp[i]=0; }
+      var glow=Math.min(1,a/6); ctx.strokeStyle=g.c+(g.base+0.5*glow)+")"; ctx.lineWidth=g.w+glow*0.8; ctx.stroke();
+    }
+    if(any&&alive) raf=requestAnimationFrame(draw); else raf=0;
+  }
+  function kick(){ if(!raf&&alive) raf=requestAnimationFrame(draw); }
+  function excite(m){
+    var u=(m-lo)/Math.max(1,hi-lo), i=Math.round(Math.max(0,Math.min(1,u))*(N-1));
+    amp[i]=Math.max(amp[i],7); if(i>0) amp[i-1]=Math.max(amp[i-1],3.5); if(i<N-1) amp[i+1]=Math.max(amp[i+1],3.5); kick();
+  }
+  function gliss(){ for(var i=0;i<N;i++){ (function(j){ setTimeout(function(){ if(alive){ amp[j]=Math.max(amp[j],2.6); kick(); } },300+j*15); })(i); } }
+  var ro=("ResizeObserver" in window)?new ResizeObserver(layout):null;
+  if(ro) ro.observe(cv); else window.addEventListener("resize",layout);
+  layout();
+  return {excite:excite, gliss:gliss, range:function(a,b){ lo=a; hi=b; }, stop:function(){ alive=false; if(raf) cancelAnimationFrame(raf); if(ro) ro.disconnect(); }};
+}
+
+/* the grand, seen from above, holding a photograph */
+var GP="M2,420 L2,42 C2,16 20,2 48,2 L94,2 C128,2 146,22 156,54 C172,104 214,134 256,160 C284,178 298,202 298,234 L298,420 Z";
+function grand(src,alt){
+  return '<svg viewBox="0 0 300 422" role="img" aria-label="'+esc(alt)+'"><defs><clipPath id="gp"><path d="'+GP+'"/></clipPath>'+
+  '<linearGradient id="gold" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#E8D29B"/><stop offset=".5" stop-color="#C9A35C"/><stop offset="1" stop-color="#806739"/></linearGradient></defs>'+
+  '<g clip-path="url(#gp)"><rect width="300" height="420" fill="#141217"/><image href="'+src+'" x="-24" y="-60" width="348" height="619" preserveAspectRatio="xMidYMid slice"/></g>'+
+  '<path d="'+GP+'" fill="none" stroke="url(#gold)" stroke-width="1.6"/></svg>';
+}
+
+/* a row of real keys along the bottom of the first screen */
+var WHITE=[0,2,4,5,7,9,11], NAMES=["C","C♯","D","D♯","E","F","F♯","G","G♯","A","A♯","B"];
+function nn(m){ return NAMES[m%12]+(Math.floor(m/12)-1); }
+function buildKbd(el){
+  var w=el.clientWidth||window.innerWidth, n=Math.max(12,Math.min(36,Math.round(w/44)));
+  if(el._n===n) return; el._n=n;
+  var whites=[]; for(var m=21;m<=108;m++) if(WHITE.indexOf(m%12)>-1) whites.push(m);
+  var c4=whites.indexOf(60), start=Math.max(0,Math.min(whites.length-n,c4+3-Math.floor(n/2)));
+  var ws=whites.slice(start,start+n), kw=100/n, h='';
+  ws.forEach(function(m){ h+='<button type="button" class="w" data-m="'+m+'" aria-label="'+nn(m)+'"></button>'; });
+  ws.forEach(function(m,i){ if(i<n-1 && WHITE.indexOf((m+1)%12)<0) h+='<button type="button" class="b" data-m="'+(m+1)+'" aria-label="'+nn(m+1)+'" style="left:'+((i+1)*kw-kw*0.31).toFixed(3)+'%;width:'+(kw*0.62).toFixed(3)+'%"></button>'; });
+  el.innerHTML=h;
+  if(SC) SC.range(ws[0],ws[ws.length-1]);
+}
+var held=false;
+function strike(k){ var m=+k.dataset.m; tone(m,.9); if(SC) SC.excite(m); k.classList.add("down"); clearTimeout(k._t); k._t=setTimeout(function(){ k.classList.remove("down"); },200); }
+function wireKbd(el){
+  el.addEventListener("pointerdown",function(e){ var k=e.target.closest("[data-m]"); if(!k) return; held=true;
+    if(e.pointerType==="mouse") e.preventDefault();
+    try{ if(k.hasPointerCapture&&k.hasPointerCapture(e.pointerId)) k.releasePointerCapture(e.pointerId); }catch(_){}
+    strike(k); });
+  el.addEventListener("pointerover",function(e){ if(!held) return; var k=e.target.closest("[data-m]"); if(k) strike(k); });
+  el.addEventListener("click",function(e){ if(e.detail!==0) return; var k=e.target.closest("[data-m]"); if(k) strike(k); });
+}
+["pointerup","pointercancel"].forEach(function(ev){ window.addEventListener(ev,function(){ held=false; }); });
+
+/* views */
+function reels(){ return '<div class="reels">'+LISTEN.map(function(r){ return '<a class="reel" '+ext(r.url)+'><figure><img src="'+r.img+'" alt="" loading="lazy"></figure><b>'+r.t+'</b></a>'; }).join('')+'</div>'; }
+function cta(h,b,cls){ return '<section class="'+cls+' cta"><div class="wrap"><h2>'+h+'</h2><div class="acts"><a class="btn" '+ext(ZURL)+'>'+b+'</a><span class="num">'+ZALO+'</span></div></div></section>'; }
+
+function vHome(t){ var h=t.home;
+  return '<section class="hero"><canvas id="strings" aria-hidden="true"></canvas>'+
+    '<div class="wrap hero-in"><div><h1 class="name">Thùy Dương</h1><p>'+h.line+'</p>'+
+    '<div class="acts"><a class="btn" href="#lessons">'+h.cta+'</a><a class="tl" href="#events">'+h.cta2+'</a></div></div>'+
+    '<figure class="grand">'+grand("img/hero.jpg",h.alt)+'</figure></div>'+
+    '<div class="kbd" id="kbd" role="group" aria-label="'+t.kbd+'"></div></section>'+
+  '<section class="day stmt"><div class="wrap"><p>'+h.stmt+'</p><a class="tl" href="#about">'+h.more+'</a></div></section>'+
+  '<section class="doors"><a class="door" href="#lessons"><img src="img/door-teach.jpg" alt="" loading="lazy"><span>'+h.d1+'</span></a>'+
+    '<a class="door" href="#events"><img src="img/perform.jpg" alt="" loading="lazy"><span>'+h.d2+'</span></a></section>'+
+  '<section class="night listen"><div class="wrap"><h2>'+h.listen+'</h2>'+reels()+'</div></section>';
+}
+function vLessons(t){ var l=t.lessons;
+  return '<section class="day ph"><div class="wrap ph-in"><div><h1>'+l.h+'</h1><p class="soft">'+l.p+'</p></div><figure><img src="img/teach.jpg" alt=""></figure></div></section>'+
+  '<section class="day"><div class="wrap bi"><div><h2>'+l.biH+'</h2><p class="soft">'+l.biP+'</p></div><div><p class="aside" lang="'+l.asideLang+'">'+l.aside+'</p></div></div></section>'+
+  cta(l.ctaH,l.ctaB,"day");
+}
+function vEvents(t){ var e=t.events;
+  return '<section class="night ph"><div class="wrap ph-in"><div><h1>'+e.h+'</h1><p class="soft">'+e.p+'</p></div><figure><img src="img/red.jpg" alt=""></figure></div></section>'+
+  '<section class="night"><div class="wrap styles">'+STYLE_MEDIA.map(function(s,i){ return '<a class="style" '+ext(s.url)+'><figure><img src="'+s.img+'" alt="" loading="lazy"></figure><h3>'+e.styles[i]+'</h3><i>'+s.t+'</i></a>'; }).join('')+'</div></section>'+
+  '<section class="night venues"><div class="wrap"><p>'+e.venues+'</p></div></section>'+
+  cta(e.ctaH,e.ctaB,"night");
+}
+function vAbout(t){ var a=t.about;
+  return '<section class="day"><div class="wrap about"><figure><img src="img/portrait.jpg" alt="'+esc(a.alt)+'"></figure>'+
+    '<div><h1>'+a.h+'</h1><div class="prose"><p class="lead">'+a.lead+'</p>'+a.p.map(function(x){ return '<p>'+x+'</p>'; }).join('')+'</div>'+
+    '<div class="acts"><a class="btn" href="#lessons">'+a.a1+'</a><a class="tl" href="#events">'+a.a2+'</a></div></div></div></section>';
+}
+function vContact(t){
+  return '<section class="night ph"><div class="wrap ph-in"><div><h1>'+t.contact.h+'</h1>'+
+    '<div class="zl"><span>Zalo</span><a '+ext(ZURL)+'>'+ZALO+'</a></div>'+
+    '<div class="soc"><a class="tl" '+ext(LINKS.yt)+'>YouTube</a><a class="tl" '+ext(LINKS.tt)+'>TikTok</a><a class="tl" '+ext(LINKS.fb)+'>Facebook</a></div>'+
+    '<p class="city soft">'+t.city+'</p></div><figure><img src="img/hands.jpg" alt=""></figure></div></section>';
+}
+function vLinks(t){
+  return '<section class="night links"><div class="av"><img src="img/avatar.jpg" alt=""></div><h1>Thùy Dương</h1>'+
+    '<div class="lk">'+t.links.items.map(function(x){ return '<a '+ext(x[1])+'>'+x[0]+'</a>'; }).join('')+'</div></section>';
+}
+var VIEWS={home:vHome,lessons:vLessons,events:vEvents,about:vAbout,contact:vContact,links:vLinks};
+
+function chrome(r){
+  var t=T[lang], n=t.nav;
+  document.documentElement.lang=lang;
+  function a(k){ return '<a href="#'+k+'"'+(r===k?' class="on" aria-current="page"':'')+'>'+n[k]+'</a>'; }
+  document.getElementById("fall").innerHTML='<div class="wrap fall-in"><nav class="fall-l">'+a("lessons")+a("events")+'</nav>'+
+    '<a class="mark" href="#home" aria-label="Duong Kylie Piano"><span class="mark-name">Duong Kylie</span><span class="mark-sub">'+t.sub+'</span></a>'+
+    '<div class="fall-r"><nav>'+a("about")+a("contact")+'</nav><button type="button" class="lang" id="langBtn" aria-label="Language">'+(lang==="vi"?'<b>VI</b> · EN':'VI · <b>EN</b>')+'</button>'+
+    '<button type="button" class="burger" id="burger" aria-label="Menu"><span></span><span></span></button></div></div><div class="slip"></div>';
+  document.getElementById("foot").innerHTML='<footer><div class="wrap"><div class="foot"><a class="mark" href="#home" style="justify-items:start"><span class="mark-name">Duong Kylie</span><span class="mark-sub">'+t.sub+'</span></a>'+
+    '<nav><a '+ext(ZURL)+'>Zalo '+ZALO+'</a><a '+ext(LINKS.yt)+'>YouTube</a><a '+ext(LINKS.tt)+'>TikTok</a><a '+ext(LINKS.fb)+'>Facebook</a></nav></div>'+
+    '<div class="end"><span>'+t.copy+'</span><span class="bar" aria-hidden="true"></span></div></div></footer>';
+  document.getElementById("fab").innerHTML=(r==="links"||r==="contact")?'':'<a class="fab" '+ext(ZURL)+'>'+t.fab+'</a>';
+  document.getElementById("langBtn").onclick=function(){ lang=lang==="vi"?"en":"vi"; try{ localStorage.setItem("dkp-lang",lang); }catch(e){} render(true); };
+  document.getElementById("burger").onclick=openDrawer;
+}
+function openDrawer(){
+  var t=T[lang], d=document.getElementById("drawer");
+  d.innerHTML='<div class="drawer"><button type="button" class="x" id="dx" aria-label="Close">×</button>'+["home","lessons","events","about","contact"].map(function(k){ return '<a href="#'+k+'">'+t.nav[k]+'</a>'; }).join('')+'</div>';
+  d.hidden=false;
+  d.querySelector("#dx").onclick=function(){ d.hidden=true; };
+  d.querySelectorAll("a").forEach(function(x){ x.addEventListener("click",function(){ d.hidden=true; }); });
+}
+
+function mount(r){
+  if(SC){ SC.stop(); SC=null; }
+  if(r!=="home") return;
+  var reduce=window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var cv=document.getElementById("strings"); if(cv&&cv.getContext){ SC=Strings(cv); if(!reduce) SC.gliss(); }
+  var kb=document.getElementById("kbd"); if(kb){ buildKbd(kb); wireKbd(kb); }
+}
+function fabWatch(){
+  var f=document.querySelector(".fab"), h=document.querySelector(".hero"); if(!f) return;
+  f.classList.toggle("away", !!h && window.scrollY < h.offsetHeight*0.75);
+}
+window.addEventListener("scroll",fabWatch,{passive:true});
+var rz=0;
+window.addEventListener("resize",function(){ clearTimeout(rz); rz=setTimeout(function(){ var kb=document.getElementById("kbd"); if(kb) buildKbd(kb); },150); });
+
+/* the computer keyboard plays too, on the first page */
+var KEYMAP={a:60,w:61,s:62,e:63,d:64,f:65,t:66,g:67,y:68,h:69,u:70,j:71,k:72,o:73,l:74,p:75,";":76};
+document.addEventListener("keydown",function(ev){
+  if(route()!=="home"||ev.repeat||ev.metaKey||ev.ctrlKey||ev.altKey) return;
+  var tag=(ev.target&&ev.target.tagName)||""; if(tag==="INPUT"||tag==="TEXTAREA"||tag==="SELECT") return;
+  var m=KEYMAP[(ev.key||"").toLowerCase()]; if(!m) return;
+  var k=document.querySelector('#kbd [data-m="'+m+'"]'); if(k) strike(k); else { tone(m,.9); if(SC) SC.excite(m); }
+});
+
+function render(keep){
+  var r=route(); chrome(r);
+  var v=document.getElementById("view");
+  v.innerHTML=VIEWS[r](T[lang]);
+  if(!keep) window.scrollTo(0,0);
+  mount(r);
+  fabWatch();
+}
+window.addEventListener("hashchange",function(){ document.getElementById("drawer").hidden=true; render(false); });
+render(true);
+})();
+</script>
+
+</body>
+</html>
